@@ -3,9 +3,17 @@ str1 = 'Novak is a GREAT tennis player'
 
 new_str = "".join(reversed(str1))
 
-print(new_str)
+#print(new_str)
 
 #Day 2 - Reverse string without built in function 
 rev_str = str1[::-1]
 
-print(rev_str)
+#print(rev_str)
+
+#Day 3 - Find if second string contains any portion of the first string
+sport = 'tennis'
+#if substring is in full string
+if sport in str1:
+    print(True)
+else:
+    print(False)
