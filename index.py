@@ -17,3 +17,11 @@ if sport in str1:
     print(True)
 else:
     print(False)
+
+
+# Day 4 - Return the factorial of an integer
+fact = 1
+for num in range(1,6):
+    fact *= num
+
+print(fact)

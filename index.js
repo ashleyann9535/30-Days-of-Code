@@ -31,3 +31,11 @@ console.log(`${color}, ${sport}, and ${meal} `)
 //Find if second string contains any portion of the first string
 console.log(sport.includes(str1))
 console.log(str1.includes(sport))
+
+//Day 4 - Return the factorial of an integer
+//loop
+let x = 1;
+for(let i = 1; i<=5; i++){
+    x *= i
+}
+console.log(x)
