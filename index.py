@@ -41,5 +41,16 @@ def area_circle(r):
 
     return area
 
-print(area_circle(2)) # 12.566
-print(area_circle(15)) # 706.85
+#print(area_circle(2)) # 12.566
+#print(area_circle(15)) # 706.85
+
+#Day 6 - Logical Operators 
+first_set = True
+court = 'hard'
+
+if court == 'hard' and first_set:
+    print('Novak will win')
+elif court != 'hard' and first_set:
+    print('Lets watch the second set')
+else:
+    print('Time to work')

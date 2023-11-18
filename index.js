@@ -65,5 +65,17 @@ function areaCircle(r){
     return area
 }
 
-console.log(areaCircle(2)) //12.566
-console.log(areaCircle(15)) //706.85
+//console.log(areaCircle(2)) //12.566
+//console.log(areaCircle(15)) //706.85
+
+//Day 6 - Logical operators 
+let wifeHungry = false
+let husbandHungry = true
+
+if (wifeHungry && husbandHungry){
+    console.log('lets order pizza')
+}else if (wifeHungry || husbandHungry){
+    console.log('husband cooks')
+}else{
+    console.log('lets have some ice cream')
+}
