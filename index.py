@@ -33,5 +33,13 @@ def kg_to_pounds(kg):
 
     return f'{pounds} pounds'
 
+#print(kg_to_pounds(7)) #15.435
 
-print(kg_to_pounds(7))
+#Area of circle
+def area_circle(r):
+    area = 3.14 * r**2
+
+    return area
+
+print(area_circle(2)) # 12.566
+print(area_circle(15)) # 706.85

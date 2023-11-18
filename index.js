@@ -41,15 +41,15 @@
 // console.log(x)
 
 //Day 5 - Conditionals
-let balance = 100.00
-let hairProducts = 29.78
+// let balance = 100.00
+// let hairProducts = 29.78
 
-if (hairProducts <= balance){
-    balance -= hairProducts
-    console.log(`you purchased your item. Your balance is ${balance}`)
-}else {
-    console.log('You do not have enough money')
-}
+// if (hairProducts <= balance){
+//     balance -= hairProducts
+//     console.log(`you purchased your item. Your balance is ${balance}`)
+// }else {
+//     console.log('You do not have enough money')
+// }
 
 //Convert kg to pounds
 function kgToPounds(kg) {
@@ -57,5 +57,13 @@ function kgToPounds(kg) {
 
     return `${pounds} pounds`
 }
+// console.log(kgToPounds(7)) //15.435
 
-console.log(kgToPounds(7))
+function areaCircle(r){
+    let area = 3.14 * r**2
+
+    return area
+}
+
+console.log(areaCircle(2)) //12.566
+console.log(areaCircle(15)) //706.85
