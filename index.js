@@ -50,3 +50,12 @@ if (hairProducts <= balance){
 }else {
     console.log('You do not have enough money')
 }
+
+//Convert kg to pounds
+function kgToPounds(kg) {
+    let pounds = kg * 2.205
+
+    return `${pounds} pounds`
+}
+
+console.log(kgToPounds(7))
