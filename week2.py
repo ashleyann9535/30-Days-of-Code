@@ -27,4 +27,15 @@ states = ['alaska', 'arkansas', 'missouri', 'texas', 'nevada', 'california'];
 # add up the count of characters from the  remaining words
 filterStates = list(filter(lambda state: state[0] == 'a', map(lambda state: state[:3], states)))
 
-print(len(filterStates) * 3)
+#print(len(filterStates) * 3)
+
+#Day 10 - Loops
+#Reverse loop
+words = ['ant', 'awkward', 'car', 'zebra']
+reversed_words = []
+for i in range(len(words)-1, -1, -1):
+    reversed_words.append(words[i])
+print(reversed_words)
+#Reverse loop with method
+words.reverse()
+print(words)
