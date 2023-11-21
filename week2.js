@@ -55,5 +55,26 @@ let filterStates = states
     .filter(state => state[0] === 'a')
     .map(state => state.substring(0,3))
     .reduce((acc, cur) => acc + cur);
+//console.log(filterStates.length)
 
-console.log(filterStates.length)
+//Day 10 - Loops
+let words = ['ant', 'awkward', 'car', 'zebra'];
+//Reverse array with loop
+let reverseLoop = [];
+for(let i = words.length -1; i >= 0; i--){
+    reverseLoop.push(words[i]);
+}
+//console.log(reverseLoop);
+//Reverse this array using the built-in reverse function
+let reverseMethod = words.reverse();
+//console.log(reverseMethod);
+
+//Create a variable named evenTotal
+//Write code that loops through the nums array, adds only the even numbers, 
+// and stores the final result in the evenTotal variable
+let nums = [2,3,4,5,6,7,8,9,10,11,12];
+
+let evensTotal = nums
+    .filter(item => item % 2 === 0)
+    .reduce((acc, cur) => acc + cur);
+console.log(evensTotal)
