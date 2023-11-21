@@ -1,29 +1,59 @@
 //Day 8 - Array Practice 
 
-let fruits = ['apple', 'banana', 'orange', 'strawberry']
-console.log(fruits)
+let fruits = ['apple', 'banana', 'orange', 'strawberry'];
+//console.log(fruits);
 //Remove orange
-fruits.splice(2,1)
-console.log(fruits)
+fruits.splice(2,1);
+//console.log(fruits);
 //Remove last item from array
-fruits.pop()
-console.log(fruits)
+fruits.pop();
+//console.log(fruits);
 //Put pear at beginning of array
-fruits.unshift('pear')
-console.log(fruits)
+fruits.unshift('pear');
+//console.log(fruits);
 //Remove all elements in array
-fruits.splice(0)
-console.log(fruits)
+fruits.splice(0);
+//console.log(fruits);
 
 //change item in array to all uppercase
-let colors = ['blue', 'red', 'green', 'yellow', 'black', 'white']
+let colors = ['blue', 'red', 'green', 'yellow', 'black', 'white'];
 const upper = colors.map(item => {
     return item.toUpperCase();
-})
-console.log(upper)
+});
+//console.log(upper);
 
 //Use the every function determine if each item in the array is greater than zero
-let numbers = [1, -2, 20, 60, 77]
-const greaterZero = numbers.every(num => num > 0)
-console.log(greaterZero)
+let numbers = [1, -2, 20, 60, 77];
+const greaterZero = numbers.every(num => num > 0);
+//console.log(greaterZero);
 
+//Day 9 - Array Methods
+let odds = [5,8,14,13,29,98]; 
+let evens = [11,6,2,87,43,22,104];
+
+//Use the filter function on the evens array to only store even numbers
+let evenNumbers = evens.filter(num => {
+    return num % 2 === 0
+});
+//console.log(evenNumbers);
+
+//Use the filter function on the odds array to only store odd number
+let oddNumbers = odds.filter(num => num % 2 != 0);
+//console.log(oddNumbers);
+
+//Add the numbers of both arrays and store the result in a variable and then print it
+let totalNumbers = odds
+    .concat(evens)
+    .reduce((acc, cur) => acc + cur, 0)
+//console.log(totalNumbers)
+
+let states = ['alaska', 'arkansas', 'missouri', 'texas', 'nevada', 'california'];
+//filter to only select states that start with 'a'
+//map and reduce each state to 3 characters  (ie “nevada” would turn into “nev”)
+//reduce to add up the count of characters from the  remaining words
+let filterStates = states
+    .filter(state => state[0] === 'a')
+    .map(state => state.substring(0,3))
+    .reduce((acc, cur) => acc + cur);
+
+console.log(filterStates.length)
