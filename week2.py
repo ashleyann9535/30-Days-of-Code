@@ -35,7 +35,31 @@ words = ['ant', 'awkward', 'car', 'zebra']
 reversed_words = []
 for i in range(len(words)-1, -1, -1):
     reversed_words.append(words[i])
-print(reversed_words)
+#print(reversed_words)
 #Reverse loop with method
 words.reverse()
-print(words)
+#print(words)
+
+# Day 11 - Functions
+# Write a function to get the difference between a given number and 27
+#If the number is greater than 27 return double the absolute difference.
+
+def twenty_seven(num):
+    if num > 27:
+        return abs(27 - num) * 2
+    else:
+        return 27 - num
+    
+#print(twenty_seven(42)) #30
+#print(twenty_seven(2)) #25
+
+#Write a function to compute the sum of the two given integers.
+#If the two values are same, then returns triple their sum.
+def sum_triple(x,y):
+    if x == y:
+        return (x + y)*3
+    else:
+        return x + y
+    
+print(sum_triple(12,12)) #72
+print(sum_triple(25, 10)) #35
