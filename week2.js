@@ -101,7 +101,7 @@ const multiples = (range, mult1, mult2) => {
     }
     return count;
 }
-//console.log(multiples(200, 6, 15));
+//console.log(multiples(200, 6, 15)); //40
 
 //Write a JavaScript program to check two given numbers and return true 
 //IF one of the number is 40 OR if their sum is 40. - else return false
@@ -112,4 +112,6 @@ const forty = (x, y) => {
         return false;
     }
 }
-console.log(forty(10, 35))
+console.log(forty(10, 35)) //false
+console.log(forty(10, 30)) //true
+console.log(forty(40, 35)) //true
