@@ -77,4 +77,39 @@ let nums = [2,3,4,5,6,7,8,9,10,11,12];
 let evensTotal = nums
     .filter(item => item % 2 === 0)
     .reduce((acc, cur) => acc + cur);
-console.log(evensTotal)
+//console.log(evensTotal)
+
+
+//Day 11 - Functions and conditional statements
+//Write a function that prints the even numbers 2-100 with only 50 iterations
+const evenLoop = (num) => {
+    for(let i =2; i <=num; i+=2){
+        console.log(i);
+    }
+    return num;
+}
+//evenLoop(100);
+
+//Write a function that returns the total count of integers 
+//that are not multiples  of either 6 or 15  between a range of 1 and 200
+const multiples = (range, mult1, mult2) => {
+    let count = 0
+    for(let i = 1; i < range; i++){
+        if(i % mult1 === 0 || i % mult2 === 0){
+            count++;
+        };
+    }
+    return count;
+}
+//console.log(multiples(200, 6, 15));
+
+//Write a JavaScript program to check two given numbers and return true 
+//IF one of the number is 40 OR if their sum is 40. - else return false
+const forty = (x, y) => {
+    if(x === 40 || y === 40 || x + y === 40){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(forty(10, 35))
