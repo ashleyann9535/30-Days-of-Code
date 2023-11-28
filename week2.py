@@ -61,5 +61,19 @@ def sum_triple(x,y):
     else:
         return x + y
     
-print(sum_triple(12,12)) #72
-print(sum_triple(25, 10)) #35
+#print(sum_triple(12,12)) #72
+#print(sum_triple(25, 10)) #35
+
+#Day 12 - Dictionary 
+#See if john is a key in dictionary
+grades = {
+    'john': 15,
+    'mark': 17,
+    'jennifer': 18
+}
+if 'john' in grades:
+    print(True) ##Answer = true
+else:
+    print(False)
+
+
