@@ -112,6 +112,54 @@ const forty = (x, y) => {
         return false;
     }
 }
-console.log(forty(10, 35)) //false
-console.log(forty(10, 30)) //true
-console.log(forty(40, 35)) //true
+//console.log(forty(10, 35)) //false
+//console.log(forty(10, 30)) //true
+//console.log(forty(40, 35)) //true
+
+//Day 12 Objects 
+//Remove Ford key from object if exists
+const vehicles = {
+    'Honda': 'CRV',
+    'Jeep': 'Wrangler',
+    'Chrysler': 'Pacifica',
+    'Ford': 'F150'
+};
+//console.log(vehicles);
+
+if('Ford' in vehicles){
+    delete vehicles.Ford;
+};
+
+//console.log(vehicles)
+
+//Put all object keys in array
+
+const students = {
+    Jon: {
+        age: 27,
+        online: false
+    },
+    Jack: {
+        age: 32,
+        online: true  
+    },
+    Jenn: {
+        age: 48,
+        online: false
+    },   
+    Liz: {
+        age: 19,
+        online: true
+    } 
+}; 
+
+const objKeys = (obj, results = []) => {
+    let prev = results;
+    Object.keys(obj)
+        .reduce((acc, key) => acc.concat(key, obj[key]), [])
+        .map(item => (typeof item === 'string' ? prev.push(item) : objKeys(item, prev)));
+    
+        return prev;
+};
+
+console.log(objKeys(students))
