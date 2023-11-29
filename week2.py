@@ -71,9 +71,21 @@ grades = {
     'mark': 17,
     'jennifer': 18
 }
-if 'john' in grades:
-    print(True) ##Answer = true
-else:
-    print(False)
+# if 'john' in grades:
+#     print(True) ##Answer = true
+# else:
+#     print(False)
 
+
+#Day 13 
+#Create a function that takes a list of two numbers as a parameter
+#Return the sum of those two numbers, plus all of the numbers in-between.
+def sum_range(arr):
+    sum = 0
+    for num in range(arr[0], arr[1]+1):
+        sum += num
+    
+    return sum
+
+print(sum_range([1,4]))#10
 

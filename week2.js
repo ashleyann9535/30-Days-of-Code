@@ -133,7 +133,6 @@ if('Ford' in vehicles){
 //console.log(vehicles)
 
 //Put all object keys in array
-
 const students = {
     Jon: {
         age: 27,
@@ -162,4 +161,17 @@ const objKeys = (obj, results = []) => {
         return prev;
 };
 
-console.log(objKeys(students))
+//console.log(objKeys(students))
+
+//Day 13 
+//Create a function that takes an array of two numbers as a parameter
+//Return the sum of those two numbers, plus all of the numbers in-between.
+const sumRange = (arr) => {
+    let sum = 0
+    for(let i = arr[0]; i <= arr[1]; i++){
+        sum += i
+    }
+    return sum
+}
+
+console.log(sumRange([1,4])) //10
