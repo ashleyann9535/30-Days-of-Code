@@ -167,11 +167,55 @@ const objKeys = (obj, results = []) => {
 //Create a function that takes an array of two numbers as a parameter
 //Return the sum of those two numbers, plus all of the numbers in-between.
 const sumRange = (arr) => {
-    let sum = 0
+    let sum = 0;
     for(let i = arr[0]; i <= arr[1]; i++){
-        sum += i
+        sum += i;
     }
-    return sum
+    return sum;
 }
 
-console.log(sumRange([1,4])) //10
+//console.log(sumRange([1,4])); //10
+
+//Day 15 - Problem Solving using functions
+//Build a function that can take any number as a parameter and then 
+//return the  sum of all the digits within that number
+const sumOfDigits = num => {
+    return num.toString().split('')
+    .reduce((acc, curr) => acc + Number(curr), 0);
+}
+// console.log(sumOfDigits(412)); //7
+// console.log(sumOfDigits(999)); //27
+
+//Create a function that takes in two strings as two parameters and 
+//returns a  boolean that indicates whether or not the first string is an anagram of the  second string.
+//Solution 1
+const isAnagram = (str1, str2) =>{
+    if (str1.length != str2.length || str1 === str2){
+        return false;
+    }
+    for (let char of str1){
+        if(str2.includes(char) === false){
+            return false; 
+        }
+    }
+
+    return true;
+}
+// console.log(isAnagram('listen', 'silent'));//true
+// console.log(isAnagram('listen', 'lilent'));//false
+// console.log(isAnagram('listen', 'rights'));//false
+
+//Solution 2
+const isAnagram2 = (str1, str2) => {
+    if (str1.length != str2.length || str1 === str2){
+        return false;
+    }
+
+    const sortedStr1 = str1.split('').sort().join('');
+    const sortedStr2 = str2.split('').sort().join('');
+
+    return sortedStr1 === sortedStr2;
+}
+console.log(isAnagram2('listen', 'silent'));//true
+console.log(isAnagram2('listen', 'lilent'));//false
+console.log(isAnagram2('listen', 'rights'));//false
