@@ -87,5 +87,23 @@ def sum_range(arr):
     
     return sum
 
-print(sum_range([1,4]))#10
+#print(sum_range([1,4]))#10
+
+
+#Day 15 - Problem Solving using functions
+#Build a function that can take any number as a parameter and then 
+#return the  sum of all the digits within that number
+def sum_of_digits(num):
+    sum = 0
+
+    while (num != 0):
+        #adds last digit of number to sum; dividing by 10% and finding the remainder 
+        sum += (num % 10)
+        #removes last digit of number using integer division - division the discards the remainder and keeps the quotient
+        num //= 10
+
+    return sum
+
+print(sum_of_digits(412)) #7
+print(sum_of_digits(123456)) #21
 
