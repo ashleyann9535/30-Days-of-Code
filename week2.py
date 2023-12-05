@@ -90,7 +90,7 @@ def sum_range(arr):
 #print(sum_range([1,4]))#10
 
 
-#Day 15 - Problem Solving using functions
+#Day 14 - Problem Solving using functions
 #Build a function that can take any number as a parameter and then 
 #return the  sum of all the digits within that number
 def sum_of_digits(num):
