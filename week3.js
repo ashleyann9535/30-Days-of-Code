@@ -9,4 +9,32 @@ const noSymbols = word => {
     return newWord;
 }
 
-console.log(noSymbols('(h<e}l]l!o')); //h e l l o
+//console.log(noSymbols('(h<e}l]l!o')); //h e l l o
+
+//Day 16
+//Write a function that accepts an array of strings. Return the longest string
+const longestStr = arr => {
+    let longest = '';
+
+    arr.forEach(element => {
+        if(element.length > longest.length){
+            longest = element;
+        };
+    });
+
+    return longest;
+
+}
+
+const longestSort = arr => {
+    arr.sort((a,b) => {
+        return a.length - b.length;
+    });
+
+    return arr[arr.length -1]
+}
+
+let testArr = ['hello', 'code', 'practice', 'fun']
+
+console.log(longestStr(testArr))
+console.log(longestSort(testArr))
