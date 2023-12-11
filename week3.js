@@ -36,5 +36,22 @@ const longestSort = arr => {
 
 let testArr = ['hello', 'code', 'practice', 'fun']
 
-console.log(longestStr(testArr))
-console.log(longestSort(testArr))
+// console.log(longestStr(testArr))
+// console.log(longestSort(testArr))
+
+//Day 17
+//Create a function that takes any number. Add 1 to each of the digits of the  number 
+//and return that value
+const addToDigit = (num) => {
+    let arr = []
+    while(num != 0){
+        arr.push((num % 10) + 1)
+
+        num = Math.floor(num / 10)
+    }
+
+    return arr.reverse().join('')
+}
+
+console.log(addToDigit(876)) //987
+console.log(addToDigit(998)) //10109
