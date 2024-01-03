@@ -31,10 +31,10 @@ const longestSort = arr => {
         return a.length - b.length;
     });
 
-    return arr[arr.length -1]
+    return arr[arr.length -1];
 }
 
-let testArr = ['hello', 'code', 'practice', 'fun']
+let testArr = ['hello', 'code', 'practice', 'fun'];
 
 // console.log(longestStr(testArr))
 // console.log(longestSort(testArr))
@@ -43,15 +43,36 @@ let testArr = ['hello', 'code', 'practice', 'fun']
 //Create a function that takes any number. Add 1 to each of the digits of the  number 
 //and return that value
 const addToDigit = (num) => {
-    let arr = []
+    let arr = [];
     while(num != 0){
-        arr.push((num % 10) + 1)
+        arr.push((num % 10) + 1);
 
-        num = Math.floor(num / 10)
+        num = Math.floor(num / 10);
     }
 
-    return arr.reverse().join('')
+    return arr.reverse().join('');
 }
 
-console.log(addToDigit(876)) //987
-console.log(addToDigit(998)) //10109
+//console.log(addToDigit(876)); //987
+//console.log(addToDigit(998)); //10109
+
+//Day 18 
+//Return the sum of all odd Fibonacci numbers that are less than or equal to num
+
+const oddFibonacci = num => {
+    let fibonacciArr = [0, 1];
+    
+    for (let i = 2; i < num; i++) {
+        fibonacciArr.push(fibonacciArr[i - 1] + fibonacciArr[i - 2]);
+    };
+
+    let oddSum = fibonacciArr
+      .filter(n => n % 2 !== 0)
+      .filter(n => n < num)
+      .reduce((acc, cur) => acc + cur);
+
+    return oddSum;
+}
+
+console.log(oddFibonacci(10)); //10
+console.log(oddFibonacci(14)); //23
